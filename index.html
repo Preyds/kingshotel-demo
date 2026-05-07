@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>De Niche Hotel | Demo</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        :root {
+            --primary-gold: #c5a059;
+            --dark-bg: #121212;
+            --card-bg: #1e1e1e;
+            --text-main: #ffffff;
+            --text-muted: #b0b0b0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid #333;
+        }
+
+        .hero {
+            height: 300px;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .stats-container {
+            padding: 20px;
+            display: flex;
+            justify-content: space-around;
+            background: var(--card-bg);
+            margin: -30px 15px 20px 15px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+        }
+
+        .stat-item { text-align: center; }
+        .stat-item h3 { margin: 0; color: var(--primary-gold); }
+        .stat-item p { margin: 0; font-size: 12px; color: var(--text-muted); }
+
+        .info-section {
+            padding: 20px;
+        }
+
+        .info-card {
+            background: var(--card-bg);
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #333;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+            margin-right: 5px;
+            margin-bottom: 10px;
+        }
+
+        .btn-call {
+            display: block;
+            background: var(--primary-gold);
+            color: black;
+            text-align: center;
+            padding: 15px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 20px;
+        }
+
+        .review-sample {
+            border-left: 3px solid var(--primary-gold);
+            padding-left: 15px;
+            font-style: italic;
+            color: var(--text-muted);
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hero">
+        <h1>De Niche Hotel</h1>
+        <p>Omole Phase 1, Lagos</p>
+    </section>
+
+    <div class="stats-container">
+        <div class="stat-item">
+            <h3>3.9</h3>
+            <p>108 Reviews</p>
+        </div>
+        <div class="stat-item">
+            <h3>4.8</h3>
+            <p>Location</p>
+        </div>
+        <div class="stat-item">
+            <h3>4.4</h3>
+            <p>Service</p>
+        </div>
+    </div>
+
+    <div class="info-section">
+        <div class="info-card">
+            <p><strong>📍 Address:</strong> 4A Omofade Cres, Omole Phase 1, Lagos</p>
+            <p><strong>📞 Contact:</strong> 0810 324 9496</p>
+        </div>
+
+        <h3>Highlights</h3>
+        <div>
+            <span class="tag">Generator ⚡</span>
+            <span class="tag">Serene Place 🌿</span>
+            <span class="tag">Kid-friendly 👨‍👩‍👧</span>
+            <span class="tag">Top Notch Maintenance 🛠️</span>
+        </div>
+
+        <h3>Top Review</h3>
+        <div class="info-card review-sample">
+            "Their services are top notch capital El-Classico..."
+        </div>
+    </div>
+
+    <a href="tel:08103249496" class="btn-call">BOOK A ROOM NOW</a>
+
+</body>
+</html>
