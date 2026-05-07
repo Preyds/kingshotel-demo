@@ -3,141 +3,152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>De Niche Hotel | Demo</title>
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <title>De Niche Hotel | Demo (Branded)</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
+        /* Color Palette from Logo */
         :root {
-            --primary-gold: #c5a059;
-            --dark-bg: #121212;
-            --card-bg: #1e1e1e;
-            --text-main: #ffffff;
-            --text-muted: #b0b0b0;
+            --niche-blue: #002D62; /* Primary Sapphire Blue */
+            --niche-white: #FFFFFF; /* Pure White */
+            --niche-gray: #F4F7F6;  /* Light Background Gray */
+            --text-dark: #333333;
+            --text-light: #777777;
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--dark-bg);
-            color: var(--text-main);
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background-color: var(--niche-gray);
+            color: var(--text-dark);
             margin: 0;
             padding: 0;
         }
 
+        /* Top Header Navigation */
         header {
-            padding: 20px;
-            text-align: center;
-            border-bottom: 1px solid #333;
+            background-color: var(--niche-white);
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid var(--niche-blue);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
 
+        .header-logo {
+            font-weight: bold;
+            color: var(--niche-blue);
+            font-size: 20px;
+            text-decoration: none;
+        }
+
+        .header-phone {
+            color: var(--niche-blue);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Hero / Gallery Photo Section */
         .hero {
-            height: 300px;
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');
+            height: 350px;
+            /* YOU MUST SAVE YOUR IMAGE AS 'lounge.jpg' IN THE SAME FOLDER */
+            background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('lounge.jpg');
             background-size: cover;
             background-position: center;
             display: flex;
             align-items: center;
             justify-content: center;
-            flex-direction: column;
+            color: var(--niche-white);
             text-align: center;
         }
 
-        .stats-container {
-            padding: 20px;
-            display: flex;
-            justify-content: space-around;
-            background: var(--card-bg);
-            margin: -30px 15px 20px 15px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+        .hero-text h1 { margin: 0; font-size: 2.5rem; letter-spacing: 1px; }
+        .hero-text p { margin: 5px 0 0; font-style: italic; font-weight: 300; }
+
+        /* Welcome Text */
+        .welcome-section {
+            padding: 30px 20px;
+            background-color: var(--niche-white);
+            text-align: center;
+            border-bottom: 1px solid #eee;
         }
 
-        .stat-item { text-align: center; }
-        .stat-item h3 { margin: 0; color: var(--primary-gold); }
-        .stat-item p { margin: 0; font-size: 12px; color: var(--text-muted); }
+        .welcome-section h2 { color: var(--niche-blue); margin-top: 0; }
 
-        .info-section {
-            padding: 20px;
-        }
+        /* Information Cards */
+        .info-container { padding: 20px; }
 
         .info-card {
-            background: var(--card-bg);
-            padding: 15px;
-            border-radius: 10px;
+            background-color: var(--niche-white);
+            padding: 20px;
+            border-radius: 8px;
             margin-bottom: 15px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            border-left: 4px solid var(--niche-blue);
         }
 
-        .tag {
-            display: inline-block;
-            background: #333;
-            padding: 5px 12px;
-            border-radius: 20px;
-            font-size: 13px;
-            margin-right: 5px;
-            margin-bottom: 10px;
-        }
+        .info-card h3 { color: var(--niche-blue); margin-top: 0; display: flex; align-items: center; }
+        .info-card h3 i { margin-right: 10px; font-size: 1.2rem; }
+        .info-card p { margin: 8px 0; color: var(--text-dark); line-height: 1.5; }
+        .info-card strong { color: var(--niche-blue); }
 
-        .btn-call {
+        /* CTA Button */
+        .btn-booking {
             display: block;
-            background: var(--primary-gold);
-            color: black;
+            background-color: var(--niche-blue);
+            color: var(--niche-white);
             text-align: center;
-            padding: 15px;
+            padding: 18px;
             border-radius: 8px;
             text-decoration: none;
             font-weight: bold;
-            margin: 20px;
+            font-size: 1.1rem;
+            margin: 25px 20px;
+            transition: background-color 0.3s;
         }
 
-        .review-sample {
-            border-left: 3px solid var(--primary-gold);
-            padding-left: 15px;
-            font-style: italic;
-            color: var(--text-muted);
-        }
+        .btn-booking:hover { background-color: #001f44; }
+
     </style>
 </head>
 <body>
 
+    <header>
+        <a href="#" class="header-logo">DE NICHE</a>
+        <a href="tel:08103249496" class="header-phone"><i class="fas fa-phone"></i> Call Now</a>
+    </header>
+
     <section class="hero">
-        <h1>De Niche Hotel</h1>
-        <p>Omole Phase 1, Lagos</p>
+        <div class="hero-text">
+            <h1>De Niche</h1>
+            <p>Hotel & Suites | Omole</p>
+        </div>
     </section>
 
-    <div class="stats-container">
-        <div class="stat-item">
-            <h3>3.9</h3>
-            <p>108 Reviews</p>
-        </div>
-        <div class="stat-item">
-            <h3>4.8</h3>
-            <p>Location</p>
-        </div>
-        <div class="stat-item">
-            <h3>4.4</h3>
-            <p>Service</p>
-        </div>
+    <div class="welcome-section">
+        <h2>A Stay With Us Feels Like Home</h2>
+        <p>Experience comfort and quiet luxury in the heart of Omole Phase 1.</p>
     </div>
 
-    <div class="info-section">
+    <div class="info-container">
+        
         <div class="info-card">
-            <p><strong>📍 Address:</strong> 4A Omofade Cres, Omole Phase 1, Lagos</p>
-            <p><strong>📞 Contact:</strong> 0810 324 9496</p>
+            <h3><i class="fas fa-map-marker-alt"></i> Location</h3>
+            <p>4A Omofade Cres, Omole Phase 1,<br>
+            Lagos 101233, Lagos, Nigeria.</p>
+            <p><strong><i class="fas fa-star" style="color:#f1c40f;"></i> Google Rating: 3.9/5</strong> (108 reviews)</p>
         </div>
 
-        <h3>Highlights</h3>
-        <div>
-            <span class="tag">Generator ⚡</span>
-            <span class="tag">Serene Place 🌿</span>
-            <span class="tag">Kid-friendly 👨‍👩‍👧</span>
-            <span class="tag">Top Notch Maintenance 🛠️</span>
+        <div class="info-card">
+            <h3><i class="fas fa-concierge-bell"></i> Amenities</h3>
+            <p><i class="fas fa-bolt" style="color:var(--niche-blue);"></i> 24/7 Standby Generator</p>
+            <p><i class="fas fa-wifi" style="color:var(--niche-blue);"></i> Free High-Speed WiFi</p>
+            <p><i class="fas fa-leaf" style="color:var(--niche-blue);"></i> Serene & Quiet Environment</p>
+            <p><i class="fas fa-baby" style="color:var(--niche-blue);"></i> Kid-friendly Environment</p>
         </div>
 
-        <h3>Top Review</h3>
-        <div class="info-card review-sample">
-            "Their services are top notch capital El-Classico..."
-        </div>
     </div>
 
-    <a href="tel:08103249496" class="btn-call">BOOK A ROOM NOW</a>
+    <a href="tel:08103249496" class="btn-booking">BOOK YOUR STAY NOW</a>
 
 </body>
 </html>
